@@ -23,7 +23,7 @@ public class CalculationService {
     private List<Integer> leftOversEstimateList;
 
     protected CalculationService() {
-
+        
     }
 
     public static CalculationService getInstance() {

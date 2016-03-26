@@ -1,9 +1,11 @@
-package pl.pwr;
+package pl.pwr.input;
+
+import pl.pwr.model.Matrix;
 
 import java.util.Random;
 
 /**
- * Created by Rafal on 2015-11-11.
+ * Created by Rafal on 2016-03-26.
  */
 public class MatrixGenerator {
 
@@ -32,5 +34,27 @@ public class MatrixGenerator {
             }
         }
         return result;
+    }
+
+    public Matrix mock4Matrix() {
+        int m[][] = {
+                {0, 92, 89, 17},
+                {92, 0, 24, 95},
+                {89, 24, 0, 67},
+                {17, 95, 67, 0}
+        };
+        return new Matrix(m);
+    }
+
+    public Matrix mock5Matrix() {
+        int m[][] = {
+                {0, 15, 18, 48,14},
+                {15, 0, 61, 62,47},
+                {18, 62, 0, 71,95},
+                {48, 62, 71, 0,42},
+                {14, 47, 95, 42,0}
+
+        };
+        return new Matrix(m);
     }
 }
