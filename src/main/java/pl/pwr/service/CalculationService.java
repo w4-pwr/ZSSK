@@ -10,7 +10,6 @@ import java.util.List;
 
 /**
  * Created by Rafal on 2015-11-04.
- *
  */
 public class CalculationService {
     private final int INF = Integer.MAX_VALUE;
@@ -68,7 +67,7 @@ public class CalculationService {
             }
 
         } catch (IndexOutOfBoundsException exc) {
-            if(Main.DEBUG) {
+            if (Main.DEBUG) {
                 System.err.println("Za malo mozliwych elementow do oszacowania");
             }
         }
@@ -109,4 +108,20 @@ public class CalculationService {
         return target;
     }
 
+    public int calculateRouteCost(Matrix matrix, int[] route) {
+
+        int  travelCosts = 0;
+        for (int i = 1; i < route.length; i++) {
+            travelCosts += matrix.getWeight(route[i - 1], route[i]);
+
+            //System.out.println("costs from "+route[i-1]+" to "+route[i]+": "+costs[route[i-1]][route[i]]);
+        }
+
+        //return to starting city
+        int n = matrix.getEdgeCount();
+        travelCosts += matrix.getWeight(route[n - 1], route[0]);
+
+        //System.out.println("costs from " + route[n - 1] + " to " + route[0] + ": " + costs[route[n - 1]][route[0]]);
+        return travelCosts;
+    }
 }

@@ -9,11 +9,10 @@ import pl.pwr.model.NodeList;
 /**
  * Created by Rafal on 2015-10-31.
  */
-public class BBAlgorithm implements Algorithm{
+public class BBAlgorithm extends Algorithm{
 
     private final int INF = Integer.MAX_VALUE;
     private String inputFiletName;
-    private Matrix matrix;
     private int upperBound;
     private int numberOfVerticles;
     private NodeList queue;
@@ -42,7 +41,7 @@ public class BBAlgorithm implements Algorithm{
     }
 
 
-    public void invoke() {
+    public void invoke(Matrix matrix) {
         //readDataFromFile();
         numberOfVerticles = matrix.getEdgeCount();
         addFirstNodeToQueue();

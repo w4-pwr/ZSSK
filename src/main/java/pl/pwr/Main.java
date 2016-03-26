@@ -1,5 +1,6 @@
 package pl.pwr;
 
+import pl.pwr.algorithm.Algorithm;
 import pl.pwr.algorithm.BBAlgorithm;
 
 import java.io.*;
@@ -7,7 +8,6 @@ import java.io.*;
 public class Main {
 
     public static final boolean DEBUG = true;
-    public static BBAlgorithm bbAlgorithm;
 
 
 
@@ -24,10 +24,10 @@ public class Main {
                 e.printStackTrace();
             }
 
-            bbAlgorithm = new BBAlgorithm();
+            Algorithm bbAlgorithm = new BBAlgorithm();
             //bbAlgorithm.generateMatrix(17);
             //bbAlgorithm.mock4Matrix();
-            bbAlgorithm.mock5Matrix();
+        //   bbAlgorithm.mock5Matrix();
 
             long timeSum = testAlgorithm(1);
 //            for (int i = 10; i < 19; i++) {
@@ -49,7 +49,7 @@ public class Main {
 
     private static long runAlgorithm() {
         long start = System.currentTimeMillis();
-        bbAlgorithm.invoke();
+      //  bbAlgorithm.invoke();
         long stop = System.currentTimeMillis();
         return  (stop - start);
     }

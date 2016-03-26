@@ -39,13 +39,9 @@ public class Node {
         return copiedOrder;
     }
 
-    public void printOrder(){
-        if(Main.DEBUG) {
+    public void printOrder() {
+        if (Main.DEBUG) {
             System.out.println("kolejnosc odwiedzanych miejscowosci:");
-
-        for (int i = 0; i < order.length; i++) {
-            System.out.print (order[i] + "  ");
-        }
         }
     }
 }
