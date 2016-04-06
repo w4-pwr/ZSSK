@@ -1,6 +1,7 @@
 package pl.pwr.algorithm;
 
 import pl.pwr.model.Matrix;
+import pl.pwr.output.AlgorithmProduct;
 import pl.pwr.service.CalculationService;
 
 /**
@@ -8,44 +9,39 @@ import pl.pwr.service.CalculationService;
  */
 public class BruteForceAlgorithm extends Algorithm{
 
-
+    private Matrix matrix;
     private int[] minRoute;
-
+    private double minCosts;
     private long count;
 
     private CalculationService calculationService;
-    private double minCosts;
 
     @Override
-    public void invoke(Matrix matrix) {
+    public AlgorithmProduct invoke(Matrix matrix) {
         this.matrix = matrix;
 
-        calculationService = CalculationService.getInstance();
+        initVariables();
+        startRecursiveAlgorithm();
+
+        return returnResults();
+    }
+
+    private void startRecursiveAlgorithm() {
 
         int[] route = new int[matrix.getEdgeCount()];
-        minRoute = new int[matrix.getEdgeCount()];
-
-        minCosts = -1;
-
-        count = 0;
-
         route[0] = 0;//first city always zero
 
         for(int i = 1;i < matrix.getEdgeCount();i++){
             route[1] = i;
             checkRoute(route,2);
         }
-
-        System.out.println("Brute force results count: "+count+", minimum cost: "+minCosts+", route: ");
-        printRoute(minRoute);
-
     }
 
     private void checkRoute(int[] route, int offset){
 
         if(offset == matrix.getEdgeCount()){
             int cost = calculationService.calculateRouteCost(matrix,route);
-            if(minCosts < 0 || cost < minCosts){
+            if(cost < minCosts){
                 minCosts = cost;
                 System.arraycopy(route,0,minRoute,0,route.length);
             }
@@ -66,10 +62,17 @@ public class BruteForceAlgorithm extends Algorithm{
         }
     }
 
-    private void printRoute(int[] minRoute) {
-        for (int i = 0; i < minRoute.length; i++) {
-            System.out.print(minRoute[i] + "  ");
-        }
+    private AlgorithmProduct  returnResults() {
 
+        return  new AlgorithmProduct(minRoute,minCosts);
     }
+
+    private void initVariables() {
+        calculationService = CalculationService.getInstance();
+        minRoute = new int[matrix.getEdgeCount()];
+        minCosts = Double.MAX_VALUE;
+        count = 0;
+    }
+
+
 }

@@ -1,6 +1,6 @@
 package pl.pwr.algorithm;
 
-import pl.pwr.input.MatrixGenerator;
+import pl.pwr.output.AlgorithmProduct;
 import pl.pwr.service.CalculationService;
 import pl.pwr.model.Matrix;
 import pl.pwr.model.Node;
@@ -12,33 +12,18 @@ import pl.pwr.model.NodeList;
 public class BBAlgorithm extends Algorithm{
 
     private final int INF = Integer.MAX_VALUE;
-    private String inputFiletName;
     private int upperBound;
     private int numberOfVerticles;
     private NodeList queue;
     private Node bestSolution;
-
-    public BBAlgorithm(Matrix matrix) {
-       this.matrix = matrix;
-    }
-
-
-    public void generateMatrix(int size) {
-        MatrixGenerator matrixGenerator = new MatrixGenerator();
-        int m[][] = matrixGenerator.generate(size);
-        matrix = new Matrix(m);
-        matrix.printMatrix();
-    }
+    private Matrix matrix;
 
     public BBAlgorithm() {
     }
 
-    public BBAlgorithm(String inputFiletName) {
-        this.inputFiletName = inputFiletName;
-    }
 
-
-    public void invoke(Matrix matrix) {
+    public AlgorithmProduct invoke(Matrix matrix) {
+        this.matrix = matrix;
         numberOfVerticles = matrix.getEdgeCount();
         addFirstNodeToQueue();
 
@@ -54,6 +39,7 @@ public class BBAlgorithm extends Algorithm{
         System.out.println("upper bound " + upperBound);
         bestSolution.printOrder();
 
+        return new AlgorithmProduct(bestSolution.order,bestSolution.lowerBound);
     }
 
     private boolean isCompletePath(Node currentNode) {

@@ -7,22 +7,29 @@ import java.util.Random;
 /**
  * Created by Rafal on 2016-03-26.
  */
-public class MatrixGenerator {
+public class MatrixGeneratorSingleton {
+
+    private static MatrixGeneratorSingleton instance;
 
     private Random random;
     private int maxWeight;
 
-    public MatrixGenerator() {
+
+    public MatrixGeneratorSingleton() {
         random = new Random();
         maxWeight = 100;
     }
 
-    public MatrixGenerator(int maxWeight) {
-        random = new Random();
-        this.maxWeight = maxWeight;
+
+    public static MatrixGeneratorSingleton getInstance(){
+
+        if(instance == null) {
+            instance = new MatrixGeneratorSingleton();
+        }
+        return instance;
     }
 
-    public int[][] generate(int size) {
+    public Matrix generate(int size) {
         int[][] result = new int[size][size];
         for (int row = 0; row < size; row++) {
             for (int col = 0; col < size; col++) {
@@ -33,7 +40,7 @@ public class MatrixGenerator {
                 }
             }
         }
-        return result;
+        return new Matrix(result);
     }
 
     public Matrix mock4Matrix() {

@@ -1,7 +1,10 @@
 package pl.pwr;
 
-import pl.pwr.algorithm.Algorithm;
 import pl.pwr.algorithm.BBAlgorithm;
+import pl.pwr.algorithm.BruteForceAlgorithm;
+import pl.pwr.input.MatrixGeneratorSingleton;
+import pl.pwr.model.Matrix;
+import pl.pwr.output.AlgorithmProduct;
 
 import java.io.*;
 
@@ -10,8 +13,24 @@ public class Main {
     public static final boolean DEBUG = true;
 
 
-
     public static void main(String[] args) {
+        //        readMatrixFromFile();
+        Matrix matrix = MatrixGeneratorSingleton.getInstance().generate(8);
+        BruteForceAlgorithm bfAlgorithm = new BruteForceAlgorithm();
+        BBAlgorithm BBalgorithm = new BBAlgorithm();
+
+        System.out.println("Brute:");
+        AlgorithmProduct result = bfAlgorithm.invoke(matrix);
+        matrix.printMatrix();
+        result.printResultData();
+
+        System.out.println("Branch and bound:");
+        result = BBalgorithm.invoke(matrix);
+        matrix.printMatrix();
+        result.printResultData();
+    }
+
+    private static void readMatrixFromFile() {
         Writer fileOutput = null;
         try {
             fileOutput = new BufferedWriter(new OutputStreamWriter(
@@ -24,19 +43,6 @@ public class Main {
                 e.printStackTrace();
             }
 
-            Algorithm bbAlgorithm = new BBAlgorithm();
-            //bbAlgorithm.generateMatrix(17);
-            //bbAlgorithm.mock4Matrix();
-        //   bbAlgorithm.mock5Matrix();
-
-            long timeSum = testAlgorithm(1);
-//            for (int i = 10; i < 19; i++) {
-//                bbAlgorithm.generateMatrix(i);
-//                long timeSum = testAlgorithm(10);
-//
-//                System.out.println(i + " wierzchołki, średnia: " + timeSum);
-//                fileOutput.write(String.format(" %d wierzcholkow, czas %d \n", i, timeSum));
-//            }
         } catch (IOException e) {
             System.err.println("Nie znaleziono pliku");
         } finally {
@@ -49,9 +55,9 @@ public class Main {
 
     private static long runAlgorithm() {
         long start = System.currentTimeMillis();
-      //  bbAlgorithm.invoke();
+        //  bbAlgorithm.invoke();
         long stop = System.currentTimeMillis();
-        return  (stop - start);
+        return (stop - start);
     }
 
     private static long testAlgorithm(int howMany) {
@@ -64,6 +70,6 @@ public class Main {
 
             timeSum += singleTime;
         }
-        return timeSum/howMany;
+        return timeSum / howMany;
     }
 }
