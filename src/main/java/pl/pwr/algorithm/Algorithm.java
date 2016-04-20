@@ -10,5 +10,5 @@ public abstract class Algorithm {
 
     private int[] minRoute;
 
-    abstract AlgorithmProduct invoke(Matrix matrix);
+    public abstract AlgorithmProduct invoke(Matrix matrix);
 }
