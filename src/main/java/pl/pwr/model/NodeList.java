@@ -12,7 +12,7 @@ public class NodeList {
         this.first = new ListElement(first);
     }
 
-    public Node popBestAndRemoveWorseThan(int upperBound) {
+    public Node popBestAndRemoveWorseThan(float upperBound) {
         ListElement best = null;
         ListElement current = first;
         while (current != null) {

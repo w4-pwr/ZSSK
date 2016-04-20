@@ -37,41 +37,11 @@ public class CalculationService {
         this.node = node;
         this.matrix = matrix;
         numberOfVerticles = matrix.getEdgeCount();
-        countCurrentPathWeight();
-        estimateLowerBound();
+
     }
 
-    private void countCurrentPathWeight() {
-        int currentLowerBound = 0;
-        for (int i = 0; i < node.numberOfNodes - 1; i++) {
-            currentLowerBound += matrix.getWeight(node.order[i], node.order[(i + 1)]);
-        }
-        node.lowerBound += currentLowerBound;
-    }
 
-    private void estimateLowerBound() {
-        copyMatrix = cloneArray(matrix.getMatrix());
-        scratchDiagonal();
-        scratchVisitedVerticles();
-        calculateShortestAcceptablePath();
-    }
 
-    private void calculateShortestAcceptablePath() {
-        int leftOver = numberOfVerticles - node.numberOfNodes + 1;
-        leftOversEstimateList = new ArrayList<>();
-        copyWeightFromMatrixToList();
-        Collections.sort(leftOversEstimateList);
-        try {
-            for (int i = 0; i < leftOver; i++) {
-                node.lowerBound += leftOversEstimateList.get(i);
-            }
-
-        } catch (IndexOutOfBoundsException exc) {
-            if (Main.DEBUG) {
-                System.err.println("Za malo mozliwych elementow do oszacowania");
-            }
-        }
-    }
 
     private void copyWeightFromMatrixToList() {
         for (int i = 0; i < numberOfVerticles; i++) {
@@ -83,20 +53,8 @@ public class CalculationService {
         }
     }
 
-    private void scratchVisitedVerticles() {
-        for (int i = 0; i < node.numberOfNodes; i++) {
-            for (int j = 0; j < numberOfVerticles; j++) {
-                copyMatrix[node.order[i]][j] = INF;
-                copyMatrix[j][node.order[i]] = INF;
-            }
-        }
-    }
 
-    private void scratchDiagonal() {
-        for (int i = 0; i < numberOfVerticles; i++) {
-            copyMatrix[i][i] = INF;
-        }
-    }
+
 
 
     public static int[][] cloneArray(final int[][] src) {

@@ -4,39 +4,32 @@ import pl.pwr.Main;
 
 public class Node {
 
-    public int[] order;
-    public int lowerBound;
-    public int numberOfNodes;
+    public int[][] matrix;
 
-    public Node(int size) {
-        this.numberOfNodes = 1;
-        order = new int[size];
+    public Edge[] solution;
+    public int[] nodeUnion;
+    public int[] endEdges;
+
+    public int added = 0;
+    public float lowerBound;
+
+    public Node(final int[][] matrix) {
+        this.matrix = matrix;
+        lowerBound = 0;
     }
-
-    public Node(Node currentNode, int nextPoint) {
-        this.order = copyOrder(currentNode.order);
-        numberOfNodes = currentNode.numberOfNodes;
-        this.order[numberOfNodes] = nextPoint;
-        numberOfNodes = currentNode.numberOfNodes + 1;
-    }
-
-    public boolean checkIfVisitedPoint(int point) {
-        for (int i = 0; i < numberOfNodes; i++)
-            if (order[i] == point)
-                return true;
-        return false;
-    }
-
-    public boolean hasAllPlaceVisited() {
-        return order.length == numberOfNodes;
-    }
-
-    public int[] copyOrder(int[] order) {
-        int[] copiedOrder = new int[order.length];
-        for (int i = 0; i < order.length; i++) {
-            copiedOrder[i] = order[i];
+   /**
+    * Unia do rozpoznawania części rozwiązania i usuwania między nimi cykli
+    */
+    public int union(int v1, int v2) {
+        int cls1 = nodeUnion[v1];
+        int cls2 = nodeUnion[v2];
+        for (int i = 0; i < nodeUnion.length; i++) {
+            if (nodeUnion[i] == cls2) {
+                nodeUnion[i] = cls1;
+            }
         }
-        return copiedOrder;
+        endEdges[cls1] = endEdges[cls2];
+        return cls1;
     }
 
     public void printOrder() {

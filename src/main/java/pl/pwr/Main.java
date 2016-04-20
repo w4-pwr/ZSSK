@@ -14,21 +14,23 @@ public class Main {
 
 
     public static void main(String[] args) {
-        //        readMatrixFromFile();
-        Matrix matrix = MatrixGeneratorSingleton.getInstance().generate(8);
-        BruteForceAlgorithm bfAlgorithm = new BruteForceAlgorithm();
-        BBAlgorithm BBalgorithm = new BBAlgorithm();
-
-        System.out.println("Brute:");
-        AlgorithmProduct result = bfAlgorithm.invoke(matrix);
+        Matrix matrix = MatrixGeneratorSingleton.getInstance().mock5Matrix();
         matrix.printMatrix();
+
+        BruteForceAlgorithm bfAlgorithm = new BruteForceAlgorithm();
+        BBAlgorithm bBalgorithm = new BBAlgorithm();
+
+        AlgorithmProduct result;
+
+        System.out.println("BruteForce:");
+        result = bfAlgorithm.invoke(matrix);
         result.printResultData();
 
         System.out.println("Branch and bound:");
-        result = BBalgorithm.invoke(matrix);
-        matrix.printMatrix();
+        result = bBalgorithm.invoke(matrix);
         result.printResultData();
     }
+
 
     private static void readMatrixFromFile() {
         Writer fileOutput = null;

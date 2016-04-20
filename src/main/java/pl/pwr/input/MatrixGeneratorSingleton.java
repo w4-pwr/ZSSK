@@ -8,7 +8,7 @@ import java.util.Random;
  * Created by Rafal on 2016-03-26.
  */
 public class MatrixGeneratorSingleton {
-
+    private final static int INF = Integer.MAX_VALUE;
     private static MatrixGeneratorSingleton instance;
 
     private Random random;
@@ -55,11 +55,11 @@ public class MatrixGeneratorSingleton {
 
     public Matrix mock5Matrix() {
         int m[][] = {
-                {0, 15, 18, 48,14},
-                {15, 0, 61, 62,47},
-                {18, 62, 0, 71,95},
-                {48, 62, 71, 0,42},
-                {14, 47, 95, 42,0}
+                {INF, 15, 18, 48,14},
+                {15, INF, 61, 62,47},
+                {18, 62, INF, 71,95},
+                {48, 62, 71, INF,42},
+                {14, 47, 95, 42,INF}
 
         };
         return new Matrix(m);

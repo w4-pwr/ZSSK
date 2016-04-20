@@ -21,7 +21,17 @@ public class Matrix {
         this.matrix = matrix;
     }
 
+    public Matrix(Matrix matrix) {
+        this.symmetric = matrix.isSymmetric();
+        this.edgeCount = matrix.getSize();
+        this.matrix = cloneArray(matrix.getMatrix());
+    }
+        //fixme
     public int getEdgeCount() {
+        return edgeCount;
+    }
+
+    public int getSize() {
         return edgeCount;
     }
 
@@ -29,60 +39,39 @@ public class Matrix {
         return symmetric;
     }
 
-    public void add(final Edge edge) {
-        matrix[edge.vertex1][edge.vertex2] = edge.weight;
-        if (symmetric) {
-            matrix[edge.vertex2][edge.vertex1] = edge.weight;
-        }
-    }
+
 
     public int getWeight(int from, int to) {
         return matrix[from][to];
-    }
-
-
-    public void remove(final Edge edge) {
-        matrix[edge.vertex1][edge.vertex2] = Edge.NO_EXIST;
-        if (symmetric) {
-            matrix[edge.vertex2][edge.vertex1] = Edge.NO_EXIST;
-        }
-        edge.invalidate();
-    }
-
-    public void update(final Edge edge) {
-        add(edge);
-    }
-
-    public Edge get(int vertex1, int vertex2) {
-        return new Edge(vertex1, vertex2, matrix[vertex1][vertex2]);
-    }
-
-    public List<Edge> getEdgesFor(int vertex) {
-        List<Edge> edges = new LinkedList<>();
-        int[] adjacentEdges = matrix[vertex];
-        for (int i = 0; i < adjacentEdges.length; i++) {
-            Edge tmpEdge = new Edge(vertex, i, adjacentEdges[i]);
-            if (tmpEdge.isExist()) {
-                edges.add(tmpEdge);
-            }
-        }
-        return edges;
     }
 
     public int[][] getMatrix() {
         return matrix;
     }
 
-    public int getSize() {
-        return edgeCount;
-    }
+
 
     public void printMatrix() {
+        System.out.println("Matrix:\n -----------------------------------------------------");
         for (int i = 0; i < getSize(); i++) {
             for (int j = 0; j < getSize(); j++) {
                 System.out.print(matrix[i][j]+"  ");
             }
             System.out.println("\n ");
         }
+        System.out.println("----------------------------------------------------");
+    }
+
+    private  int[][] cloneArray(final int[][] src) {
+        int length = src.length;
+        int[][] target = new int[length][length];
+        for (int i = 0; i < length; i++) {
+            System.arraycopy(src[i], 0, target[i], 0, length);
+        }
+        return target;
+    }
+
+    public void setWeight(int row, int col, int weight) {
+        matrix[row][col] = weight;
     }
 }
