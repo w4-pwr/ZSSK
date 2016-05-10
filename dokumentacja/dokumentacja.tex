@@ -3,9 +3,12 @@
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
+\usepackage{biblatex}
+
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{geometry}
+\usepackage{listings}
 \geometry{
 	a4paper,
 	total={170mm,257mm},
@@ -15,6 +18,7 @@
 	bottom = 25mm
 }
 
+  
 
 \begin{document}
 	\newgeometry{tmargin=2cm, bmargin=2cm, lmargin=2cm, rmargin=2cm}
@@ -53,14 +57,18 @@
 	\end{titlepage}
 
 \tableofcontents
+
 \newpage
 	
-	
+\listoffigures
+\listoftables	
 	
 	
 \section{Wstęp}
 	\subsection{Cel projektu}
+		Celem projektu jest zbadanie wpływu zmiany ilości wątków na czas działania programów.
 	\subsection {Zakres projektu}
+	Projekt obejmuje implementację oraz zbadanie czasu działania algorytmów grafowych poszukiwania najkrótszej ścieżki pomiędzy wszystkimi wierzchołkami. Problem znany jest powszechnie jako problem komiwojażera.
 \section{Sformułowanie problemu}
 		Problem komiwojażera jest problemem optymalizacyjnym, polegającym na znalezieniu ścieżki pomiędzy ustalonymi miastami dla następujących warunków: 
 		\begin{itemize}
@@ -72,6 +80,7 @@
 		
 	\subsection{Opis wariantów problemu}	
 		\subsubsection{Przegląd zupełny}
+				W algorytmie przeglądu zupełnego zastosowana jest taktyka brutalna, silna. Systematycznie sprawdzane są kolejne wartości funkcji długości drogi dla wszystkich możliwych permutacji wierzchołków. Zastosowany przez nas algorytm w sposób sprytny i zwinny, poprzez rekurencję zapewnia sprawdzenie wszystkich możliwości.
 		\subsubsection{Branch\&Bound}
 			
 				W rozwiązaniu powyższego problemu zastosowano metodę podziału i ograniczeń. Metoda ta jest metodą optymalizacji dyskretnej, opierając się na podejściu \textit{dziel i zwycięzaj}.
@@ -80,53 +89,229 @@
 \section{Projekt aplikacji}	
 	\subsection{Wybrane klasy}
 	
-		\subsubsection{Matrix}
-		\subsubsection{Edge}
-		\subsubsection{Node}
+		\subsubsection{klasa Matrix}
+			Poniżej przedstawiono kod klasy matrix. Odzwierciedla ona macierz sąsiedztwa, w której przechowywane są informacje na temat grafu.
+			
+			\begin{lstlisting}[xleftmargin=-100pt]
+			public class Matrix {
+			
+				private int[][] matrix;
+			
+				private int edgeCount;
+				
+				public Matrix(final int size) {
+				edgeCount = size;
+				matrix = new int[size][size];
+				}
+				
+				public Matrix(int[][] matrix) {
+				edgeCount = matrix.length;
+				this.matrix = matrix;
+				}
+										
+				public int getSize() {
+				return edgeCount;
+				}
+				
+			}
+			\end{lstlisting}
+		\subsubsection{klasa Edge}
 		
+		Klasa Edge pełni formę klasy pomocniczej podczas działania algorytmów. Przechowuje ona informację o konkretnej krawędzi, czyli wierzchołek początkowy i końcowy wraz z wagą.
+			\begin{lstlisting}[xleftmargin=-100pt]
+			public class Edge {
+			
+				public int startVertex;
+				public int endVertex;
+				public int weight = 0;
+						
+			}
+			
+			\end{lstlisting}
+		\subsubsection{klasa Node}
+			Klasa Node jest również wierzchołkiem, lecz nie grafu, ale drzewa przeszukiwania w algorytmie podziału i ograniczeń. Obiekty tej klasy są fundamentalne dla działania całości algorytmu. 
+				\begin{lstlisting}[xleftmargin=-150pt]
+				public class Node {
+					
+					public int[][] matrix;
+					
+					public Edge[] solution;
+					public int[] endEdges;
+					
+					public int added = 0;
+					public float lowerBound;
+					
+					public Node(final int[][] matrix) {
+					this.matrix = matrix;
+					lowerBound = 0;
+					}
+				}
+				\end{lstlisting}
 	\subsection{Realizacja algorytmów wyznaczania rozwiązań}
 		\subsubsection{Przegląd zupełny}
+				W algorytmie przeglądu zupełnego systematycznie sprawdzane są kolejne wartości funkcji długości drogi dla wszystkich możliwych permutacji wierzchołków. Zastosowany przez nas algorytm w sposób sprytny i zwinny, poprzez rekurencję, zapewnia sprawdzenie wszystkich możliwości. Najpierw sprawdzany jest warunek stopu rekurencji,czyli fakt, ze rozważamy permutację zbioru wszystkich możliwych elementów. Następnie wyliczana zostaje długość ścieżki w następujący sposób:
+				\begin{lstlisting}[xleftmargin=-150pt]
+				
+				 int  travelCosts = 0;
+				 for (int i = 1; i < route.length; i++) {
+					 travelCosts += matrix.getWeight(route[i - 1], route[i]);
+				 }
+				//powrot do miejsca startu
+				 int n = matrix.getEdgeCount();
+				 travelCosts += matrix.getWeight(route[n - 1], route[0]);
+				\end{lstlisting}
 		\subsubsection{Branch\&Bound}
-		
+			Algorytm Branch and Bound został zaimplementowany na podstawie algorytmu Little'a. Sukcesywnie przeglądane jest drzewo przeszukiwań dla kolejnych węzłów. Dla każdego poddrzewa obliczona zostaje wartość dolnego ograniczenia. Jeżeli wstępna wartość jest większa od dotychczas znalezionej wycinane zostaje całe poddrzewo rozważanych rozwiązań. W naszym algorytmie oszacowanie odbywa sie na podstawie minimalnych możliwych dróg pozostałych do rozważenia, przy czym nie brana jest pod uwagę kolejność sumowanych dróg. 
 	\subsection{Odczyt i zapis danych}
-		\subsubsection{Wczytywanie z plików .tsp}	
-		\subsubsection{Wczytywanie macierzy}
-		\subsubsection{Generowanie danych losowych}
-		\subsubsection{Generwoanie plikóW cvs}
+		\subsubsection{Wczytywanie z plików .tsp}
+			W celu analizy danych przetwarzanych zaimplementowany został mechanizm wczytywania danych z plików o rozszerzeniu {\it .tsp}
+			
+				\begin{lstlisting}[xleftmargin=-150pt]
+				public class TSPFileParserImpl implements TSPFileParser {
+				 FileReader fr = null;
+				 BufferedReader bfr;
+				 String tspFileExtension = ".tsp";
+				 
+				 public List<Edge> parseFile(String fileName) {
+					 List<Edge> edgeList;
+					 openFile(fileName);
+					 cityList = readData();
+					 closeFile();
+					 return edgeList;
+				 }
+				 
+				 private List<Edge> readData() {
+				 List<Edge> edgeList = new ArrayList<>();
+				 
+				 Optional<String> readedLine = Optional.ofNullable(readLine());
+				 while (readedLine.isPresent()) {
+						 String dataCheck = readedLine.get();
+					 if (isLineContainsData(dataCheck)) {
+						 Edge edge = getEdgeFromData(dataCheck);
+						 edgeList.add(edge);
+					 }
+					 readedLine = Optional.ofNullable(readLine());
+				 }
+				 return edgeList;
+				 }
+				 					 
+				 private Edge getEdgeFromData(String line) {
+				 
+					 Iterable<String> splittedData = splitData(line);
+					 
+					 if (isValid(splittedData)) {
+					 Iterator<String> stringSlitted = splittedData.iterator();
+					 int index = Integer.parseInt(stringSlitted.next());
+					 double x = Double.parseDouble(stringSlitted.next());
+					 double y = Double.parseDouble(stringSlitted.next());
+					 return new Edge(x, y);
+					 }
+				 return null;
+				 }
+				 }
+				\end{lstlisting}
+		
+		\subsubsection{Generowanie macierzy losowo}
+			Generowanie macierzy odbywa sie w klasie MatrixGeneratorSingleton:
+			\begin{lstlisting}[xleftmargin=-150pt]
+				public class MatrixGeneratorSingleton {
+				
+					private final static int INF = Integer.MAX_VALUE;
+					private static MatrixGeneratorSingleton instance;
+					
+					private Random random;
+					private int maxWeight;
+					
+					public MatrixGeneratorSingleton() {
+						random = new Random();
+						maxWeight = 100;
+					}
+										
+					public static MatrixGeneratorSingleton getInstance() {
+					
+						if (instance == null) {
+							instance = new MatrixGeneratorSingleton();
+						}
+						return instance;
+					}
+					
+					public Matrix generate(int size) {
+						int[][] result = new int[size][size];
+						for (int row = 0; row < size; row++) {
+							for (int col = 0; col < size; col++) {
+								if (row != col) {
+									int value = random.nextInt(maxWeight) + 1;
+									result[row][col] = value;
+									result[col][row] = value;
+								}
+							}
+						}
+						for (int i = 0; i < size; i++) {
+						result[i][i] = INF;
+						}
+						return new Matrix(result);
+					}
+				}
+			\end{lstlisting}	
+		
+		\subsubsection{Generwoanie plików cvs}
+			\begin{lstlisting}[xleftmargin=-150pt]
+			
+			public class CSVGenerator {
+			
+			String SEPARATOR = ";";
+			
+			public String createFile(int generations, int population, boolean random) {
+				String filename = getFilename(generations, population, random);
+				try {
+					FileWriter writer = new FileWriter(filename);
+					
+					writer.append("Nazwa instancji");
+					writer.append(SEPARATOR);
+					writer.append("Czas");
+					writer.append(SEPARATOR);
+					writer.append("Poczatkowa dlugosc");
+					writer.append(SEPARATOR);
+					writer.append("Koncowa dlugosc");
+					writer.append('\n');
+					
+					writer.flush();
+					writer.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				return filename;
+			}
+			
+			public void addRecord(String outputfileName, String tspName, long time, int initialPath, int finalPath) {
+			try {
+				FileWriter writer = new FileWriter(outputfileName, true);
+				writer.append(tspName);
+				writer.append(SEPARATOR);
+				writer.append(String.valueOf(time));
+				writer.append(SEPARATOR);
+				writer.append(String.valueOf(initialPath));
+				writer.append(SEPARATOR);
+				writer.append(String.valueOf(finalPath));
+				writer.append('\n');
+				writer.flush();
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			}
+			\end{lstlisting}
 \section{Testowanie wydajności}	
 	\subsection{Czasy wykonania algorytmów}
-		\subsubsection{Czas działania algorytmu metodą podziału i ograniczeń}
+		
+		
+		
+		\subsubsection{Czas działania algorytmu dla przeglądu zupełnego - wersja szeregowa}
+			
+		Pierwszym etapem było zbadanie czasu działania algorytmu podczas pracy w wersji szeregowej. Sukcesywnie uruchamiano algorytmy Na jednym wątku. Czas działania wzrastał wykładniczo. Efekt ten jest spodziewany, mianowicie przy każdym dodatkowym n- wierzchołku ilość obliczeń rośnie o n+1. Poniżej przedstawiona została tabela wraz z zebranymi wynikami:
 		\begin{table}[H]
 			\centering
-			\caption{Uśrednione wyniki dla 18 różnych ilości wierzchołków}
-			\begin{tabular}{|c|c|}
-				
-				\hline Ilość miast  & czas działania algorytmu [ms] \\ 
-				\hline  10& 11 \\ 
-				\hline  11& 6 \\ 
-				\hline  12& 36\\ 
-				\hline  13& 100\\ 
-				\hline  14& 1535\\ 
-				\hline  15& 74434\\ 
-				\hline  16& 864463\\ 
-				\hline  17& 36992\\ 
-				\hline  18& 1560456\\ 			
-				\hline 
-			\end{tabular} 
-		\end{table}
-		
-		Poniższy wykres przedstawia czas działania algorytmu dla metody podziału i ograniczeń. Wykres ma charakter wykładniczy.Znaczące różnice czasu można zaobserwować już pomiędzy 15 a 16 wierzchołkiem.
-		\begin{center}
-			\includegraphics[width=0.7\linewidth]{bb}
-		\end{center}
-	
-	
-		
-		
-		\subsubsection{Czas działania algorytmu dla przeglądu zupełnego}
-		\begin{table}[H]
-			\centering
-			\caption{Uśrednione wyniki dla 6 różnych ilości wierzchołków}
+			\caption{Uśrednione wyniki dla 8 różnych ilości wierzchołków}
 			\begin{tabular}{|c|c|}
 				
 				\hline Ilość miast  & czas działania algorytmu [ms] \\ 
@@ -134,24 +319,124 @@
 				\hline  7& 0,5 \\ 
 				\hline  8& 3,2\\ 
 				\hline  9& 25,2\\ 
-				\hline  10& 252,5\\ 
-				\hline  11& 2340\\ 
+				\hline  10& 765\\ 
+				\hline  11& 2803\\ 
+				\hline  12& 28798\\ 
+				\hline  13& 375225\\ 
 				
 				\hline 
 			\end{tabular} 
 		\end{table}
 		Czas działania algorytmu dla przeglądu zupełnego ma charakter wykładniczy. Jest to metoda z najgorszą możliwą złożonością, jednakże z pewnością daje dobre wyniki.
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{bfS}
+			\caption{Algorytm przeglądu zupełnego - szeregowo}
+		\end{figure}
+		\subsubsection{Czas działania algorytmu dla przeglądu zupełnego - wersja równoległa}
+			Kolejnym krokiem było uruchomienie algorytmu przeglądu zupełnego na wielu wątkach. Dla każdego rozmiaru problemu został uruchomiony osobny wątek. Z racji charakteru tego rozwiązania niemożliwe jest badanie czasu dla osobnych problemów. Dlatego, zbadany czas jest wynikiem sumarycznym pracy algorytmu dla rozmiarów {\it 10, 11, 12}. Czas działania wyniósł {\it 29117ms}. 
+			
+			
+		\subsubsection{Porównanie czasów wykonywania algorytmu przeglądu zupełnego} 
+		Wykres przedstawiony poniżej pozwala zaobserwować różnice pomiędzy czasem wykonywania algorytmu zarówno dla metody szeregowej jak i równoległej.
+			\begin{table}[H]
+				\centering
+				\caption{Porównanie czasu wykonywania algorytmów w wersji szeregowej i równoległej}
+				\begin{tabular}{|c|c|}
+					\hline Rodzaj algorytmu & czas działania [ms] \\ 
+					\hline szeregowo & 32366 \\ 
+					\hline równolegle& 29117 \\ 
+							
+					\hline 
+				\end{tabular} 
+			\end{table}	
+			
+		Poniżej przedstawiono wykres ukazujący różnicę w czasach działania algorytmu. Warto zauważyć, że czas algorytmu uruchomionego równolegle jest zbliżony do pojedynczego uruchomienia algorytmu dla przypadku szeregowego w rozmiarze 12 wierzchołków. Oznacza to, że w czasie jaki algorytm szeregowy potrzebuje na obliczenie jedynie problemu dla 12 wierzchołków, wersja równoległa zdołała obliczyć rozwiązanie dla rozmiaru 10 oraz 11. 
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{bfSvsR.png}
+			\caption{Przegląd zupełny-porównianie uruchomienia szeregowego i równoległego}
+		\end{figure}
+		
+	\subsubsection{Czas działania algorytmu metodą podziału i ograniczeń  - wersja szeregowa}
+		
+		Czas działania algorytmu w tym przypadku jest dużo bardziej przystępny. W poniższym zestawieniu zebrane są testy czasów dla algorytmu uruchomionego sekwencyjnie, na jednym wątku. Charakterystyka algorytmu pozwala, a właściwie zmusza do badania algorytmu dla większych danych testowych.
+	\begin{table}[H]
+		\centering
+		\caption{Uśrednione wyniki dla różnych ilości wierzchołków}
+		\begin{tabular}{|c|c|}
+			
+			\hline Ilość miast  & czas działania algorytmu [ms] \\ 
+			\hline  30& 11541 \\ 
+			\hline  40& 25827 \\ 
+			\hline  50& 73618\\ 
+			\hline  60& 95695\\ 
+			\hline 
+		\end{tabular} 
+	\end{table}
+	
+	Poniższy wykres przedstawia czas działania algorytmu dla metody podziału i ograniczeń. Jest to wykres zależności czasu działania algorytmu od ilość wierzchołków.
+
+	\begin{center}
+		
+		\includegraphics[width=0.7\linewidth]{bbS}
+		
+	\end{center}
+	
+	\subsubsection{Czas działania algorytmu metodą podziału i ograniczeń  - wersja równoległa}
+	
+	Podobnie jak w przypadku algorytmu przeglądu zupełnego tak i w tym przypadku charakterystyka sposobu wywoływania algorytmu nie pozwala na rozróżnienie czasu działania dla pojedynczych rozmiarów problemu. W tym przypadku algorytm został uruchomiony na kilku wątkach, po jednym dla każdego rozmiaru. Po zakończeniu działania wszystkich wątków został zmierzony czas. Sprawdzono czas działania algorytmu dla 30 i 40 wątków. Następnie dołożony został kolejny wątek liczący rozwiązanie dla 30, 40 i 50 wierzchołków.
+		\\
+
+		\begin{table}[H]
+			\centering
+			\caption{wyniki działania równoległego algorytmu komiwojażera}
+			\begin{tabular}{|c|c|}
+				
+				\hline Ilość miast  & czas działania algorytmu [ms] \\ 
+				\hline  30,40 & 12925 \\ 
+				\hline  30,40,50 & 188394 \\ 
+				\hline 
+			\end{tabular} 
+		\end{table}
+		
+	\begin{center}
+		
+		\includegraphics[width=0.7\linewidth]{bbR}
+		
+	\end{center}
+
+	\subsubsection{Porównanie czasu działania algorytmu metodą podziału i ograniczeń}
+	Poniższy wykres przedstawia różnicę pomiędzy czasami wykonywania dla algorytmu podziału i ograniczeń. 
+	
 		\begin{center}
-			\includegraphics[width=0.7\linewidth]{bf}
+				\includegraphics[width=0.7\linewidth]{bbRvsS}
 		\end{center}
-		\subsubsection{Porównanie czasów wykonywania algorytmu} 
-		Wykres przedstawiony poniżej pozwala zaobserwować różnice pomiędzy czasem wykonywania algorytmu zarówno dla metody podziału i ograniczeń jak i przeglądu zupełnego. Nie jest zaskoczeniem, że czas sprawdzenia wszystkich możliwości jest dużo większy niż algorytm wykluczający pewne rozwiązania ze zbioru możliwych permutacji. 
-		\begin{center}
-			\includegraphics[width=0.7\linewidth]{bbVSbf.png}
-		\end{center}
+		
 	
 	\subsection{Analiza i ocena jakości}
+		Przeanalizowanie jakości jest zadaniem nietrywialnym, lecz możliwym. Algorytm przeglądu zupełnego daje rozwiązanie optymalne zawsze. Kosztowne jest jednak sprawdzenie wszystkich możliwych rozwiązań. W wykresów przestawionych w tym dokumencie można z łatwością wywnioskować, że czas działania rośnie w sposób wykładniczy.Przy 15 wierzchołkach problem jest praktycznie nierozwiązywalny przez domowe komputery. Drugie podejście analizowanie w tym projekcie pozwala na znaczne zredukowanie czasu działania. Jednakże odbywa się to kosztem pamięci. Jest to spowodowane faktem przechowywania w pamięci drzewa przeszukiwań, które podczas pracy algorytmu rozrasta się bardzo szybko. Podczas badań czasu pracy algorytmu Java zwróciła błąd przepełnienia pamięci już dla 75 wierzchołków. Nie jest to wartość deterministyczna, ponieważ zależy od wygenerowanych danych wejściowych. Może okazać się, ze szybko znajdziemy minimum lokalne funkcji drogi i odrzucone zostaną rozwiązania na pewno nie optymalne.
+	\subsection{Wnioski z testów i badań}
+		Największą trudnością podczas badań było wstępne oszacowanie czasu pracy algorytmów. Jeżeli rozmiar problemu wejściowego był zbyt duży, czas oczekiwania na wyniki stawał się zbyt duże.
+		
 \section{Podsumowanie}
-
-
+	Wykonanie projektu pozwoliło uzmysłowić nam istotę dobrego planowania pracy podczas operacji na wielu wątkach. Najistotniejszymi problemami jest synchronizowany dostęp do zasobów podczas pracy wielu wątków. Zmierzyliśmy się z tym problem podczas mierzenia czasu pracy algorytmów. Zastosowanie odpowiednich technik i badań operacyjnych umożliwiło implementację algorytmów. Algorytmy rozwiązujące optymalizacyjny problem komiwojażera są tematem rozległym i nietrywialnym.
+\section{Bibliografia}
+\printbibliography[heading=none]
+\begin{thebibliography}{9}
+	
+	\bibitem{cormen}
+	Thomas Cormen,
+	\emph{Wstęp do algorytmów},
+	Leiserson,Rivest, Stein
+	7nd edition,
+	2005.
+	
+	\bibitem{little}
+	John Little, 
+	\emph{An algorithm for the traveling salesman problem},
+	Little, John
+	1963.
+	
+\end{thebibliography}
 \end{document}\documentclass{article}

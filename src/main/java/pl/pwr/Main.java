@@ -16,8 +16,8 @@ public class Main {
     private static int workEnds = 0;
 
     public static void main(String[] args) {
-        //runDemo();
-        runTestTimeBruteForceAlgorithm();
+        runDemo();
+        //runAlgorithmMultiThreaded();
     }
 
     private static void runTestTimeBruteForceAlgorithm() {
@@ -26,30 +26,40 @@ public class Main {
         runAlgorithmMultiThreaded();
     }
 
+    private static void runTestTimeBBAlgorithm() {
+        BBAlgorithm bbAlgorithm = new BBAlgorithm();
+        runAlgorithmSerially(bbAlgorithm);
+        runAlgorithmMultiThreaded();
+    }
     private static void runAlgorithmMultiThreaded() {
-        System.out.println("WIELOWĄTKOWO Brute Force:");
-        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(10);
-        Matrix matrix11 = MatrixGeneratorSingleton.getInstance().generate(11);
-        Matrix matrix12 = MatrixGeneratorSingleton.getInstance().generate(12);
+        System.out.println("WIELOWĄTKOWO:");
+        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(30);
+        Matrix matrix11 = MatrixGeneratorSingleton.getInstance().generate(40);
+        Matrix matrix12 = MatrixGeneratorSingleton.getInstance().generate(50);
+        Matrix matrix13 = MatrixGeneratorSingleton.getInstance().generate(60);
 
         Thread thread = new Thread(() -> {
-            new BruteForceAlgorithm().invoke(matrix10);
+            new BBAlgorithm().invoke(matrix10);
             notifyAboutEndWork();
 
         });
         Thread thread1 = new Thread(() -> {
-            new BruteForceAlgorithm().invoke(matrix11);
+            new BBAlgorithm().invoke(matrix11);
             notifyAboutEndWork();
         });
         Thread thread2 = new Thread(() -> {
-            new BruteForceAlgorithm().invoke(matrix12);
+            new BBAlgorithm().invoke(matrix12);
             notifyAboutEndWork();
         });
-
+//        Thread thread3 = new Thread(() -> {
+//            new BBAlgorithm().invoke(matrix13);
+//            notifyAboutEndWork();
+//        });
         threadsStartTime = System.currentTimeMillis();
         thread.start();
         thread1.start();
         thread2.start();
+       // thread3.start();
 
     }
 
@@ -65,9 +75,9 @@ public class Main {
 
     private static void runAlgorithmSerially(Algorithm algorithm) {
         System.out.print("SZEREGOWO\n");
-        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(10);
-        Matrix matrix11 = MatrixGeneratorSingleton.getInstance().generate(11);
-        Matrix matrix12 = MatrixGeneratorSingleton.getInstance().generate(12);
+        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(30);
+        Matrix matrix11 = MatrixGeneratorSingleton.getInstance().generate(40);
+        Matrix matrix12 = MatrixGeneratorSingleton.getInstance().generate(70);
 
         long start = System.currentTimeMillis();
         algorithm.invoke(matrix10);
@@ -92,7 +102,7 @@ public class Main {
     }
 
     private static void runDemo() {
-        Matrix matrix = MatrixGeneratorSingleton.getInstance().mock5Matrix();
+        Matrix matrix = MatrixGeneratorSingleton.getInstance().mockDummyMatrix();
         matrix.printMatrix();
 
         BruteForceAlgorithm bfAlgorithm = new BruteForceAlgorithm();
