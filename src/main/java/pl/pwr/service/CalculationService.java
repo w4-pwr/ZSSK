@@ -77,7 +77,7 @@ public class CalculationService {
 
         //return to starting city
         int n = matrix.getEdgeCount();
-        travelCosts += matrix.getWeight(route[n - 1], route[0]);
+        //travelCosts += matrix.getWeight(route[n - 1], route[0]);
 
         //System.out.println("costs from " + route[n - 1] + " to " + route[0] + ": " + costs[route[n - 1]][route[0]]);
         return travelCosts;

@@ -16,8 +16,12 @@ public class Main {
     private static int workEnds = 0;
 
     public static void main(String[] args) {
-        runDemo();
-        //runAlgorithmMultiThreaded();
+        //runDemo();
+        //runTestTimeBBAlgorithm();
+        runAlgorithmMultiThreaded();
+
+        BBAlgorithm algorithm = new BBAlgorithm();
+       // runAlgorithmSerially(algorithm);
     }
 
     private static void runTestTimeBruteForceAlgorithm() {
@@ -31,42 +35,24 @@ public class Main {
         runAlgorithmSerially(bbAlgorithm);
         runAlgorithmMultiThreaded();
     }
+
     private static void runAlgorithmMultiThreaded() {
         System.out.println("WIELOWĄTKOWO:");
-        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(30);
-        Matrix matrix11 = MatrixGeneratorSingleton.getInstance().generate(40);
-        Matrix matrix12 = MatrixGeneratorSingleton.getInstance().generate(50);
-        Matrix matrix13 = MatrixGeneratorSingleton.getInstance().generate(60);
-
-        Thread thread = new Thread(() -> {
-            new BBAlgorithm().invoke(matrix10);
-            notifyAboutEndWork();
-
-        });
-        Thread thread1 = new Thread(() -> {
-            new BBAlgorithm().invoke(matrix11);
-            notifyAboutEndWork();
-        });
-        Thread thread2 = new Thread(() -> {
-            new BBAlgorithm().invoke(matrix12);
-            notifyAboutEndWork();
-        });
-//        Thread thread3 = new Thread(() -> {
-//            new BBAlgorithm().invoke(matrix13);
-//            notifyAboutEndWork();
-//        });
+        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(50);
         threadsStartTime = System.currentTimeMillis();
-        thread.start();
-        thread1.start();
-        thread2.start();
-       // thread3.start();
 
+        for(int i=0; i<10;i++){
+            new Thread(() -> {
+                new BBAlgorithm().invoke(matrix10);
+                notifyAboutEndWork();
+            }).start();
+        }
     }
 
     private synchronized static void notifyAboutEndWork() {
         workEnds++;
 
-        if (workEnds == 3) {
+        if (workEnds == 10) {
             long stop = System.currentTimeMillis();
             System.out.println("Razem: " + (stop - threadsStartTime) + "ms");
         }
@@ -75,30 +61,17 @@ public class Main {
 
     private static void runAlgorithmSerially(Algorithm algorithm) {
         System.out.print("SZEREGOWO\n");
-        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(30);
-        Matrix matrix11 = MatrixGeneratorSingleton.getInstance().generate(40);
-        Matrix matrix12 = MatrixGeneratorSingleton.getInstance().generate(70);
-
-        long start = System.currentTimeMillis();
-        algorithm.invoke(matrix10);
-        long stop = System.currentTimeMillis();
-        long overAllTimeFor10Edges = stop - start;
-        System.out.println("Dla 10 wierzcholkow: " + overAllTimeFor10Edges + "ms");
-
-        start = System.currentTimeMillis();
-        algorithm.invoke(matrix11);
-        stop = System.currentTimeMillis();
-        long overAllTimeFor11Edges = stop - start;
-        System.out.println("Dla 11 wierzcholkow: " + overAllTimeFor11Edges + "ms");
-
-        start = System.currentTimeMillis();
-        algorithm.invoke(matrix12);
-        stop = System.currentTimeMillis();
-        long overAllTimeFor12Edges = stop - start;
-        System.out.println("Dla 12 wierzcholkow: " + overAllTimeFor12Edges + "ms");
-
-        long sum = overAllTimeFor10Edges + overAllTimeFor11Edges + overAllTimeFor12Edges;
-        System.out.println("Razem: " + sum + "ms");
+        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(50);
+        long allTime = 0L;
+        for(int i=0; i<10;i++){
+            long start = System.currentTimeMillis();
+            algorithm.invoke(matrix10);
+            long stop = System.currentTimeMillis();
+            long currentTime = stop - start;
+            System.out.println("Przebieg nr: "+ i +"czas: "+currentTime);
+            allTime+= currentTime;
+        }
+           System.out.println("suma czasów: " + allTime );
     }
 
     private static void runDemo() {
