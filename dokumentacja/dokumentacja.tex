@@ -89,7 +89,8 @@
 			
 				W rozwiązaniu powyższego problemu zastosowano metodę podziału i ograniczeń. Metoda ta jest metodą optymalizacji dyskretnej, opierając się na podejściu \textit{dziel i zwyciężaj}.
 				W każdym kroku algorytmu przeglądane jest drzewo potencjalnych rozwiązań. Jeżeli natrafimy na węzeł, który jest liściem, czyli można określić dla niego długość drogi komiwojażera, sprawdzamy, czy nowo znaleziona wartość nie jest lepsza od aktualnie zapisanej. Jeżeli tak jest, to zapamiętujemy nowe rozwiązanie. W przypadku, gdy dany węzeł nie jest liściem, tworzymy dla niego pod-problemy. W tym celu odwiedzamy kolejne miasto starając się oszacować dolne ograniczenie kosztów całej trasy. W tym projekcie wykorzystano najprostszy sposób szacowania. Na początku z macierzy sąsiedztwa wycinana jest przekątna, następnie kolumny i wiersze miejsc już odwiedzonych. Następnie wartości z tak przygotowanej macierzy są sortowane w kolejności niemalejącej. Szacowanie polega na dodaniu do siebie tylu kolejnych wartości z listy, ile zostało miast do odwiedzenia. W niniejszym projekcie do przetrzymywania drzewa rozwiązań wykorzystano listę jednokierunkową. Wybór wynika z faktu, iż i tak należy przejrzeć wszystkie możliwe węzły, aby sprawdzić, czy ich ograniczenie nie jest większe niż aktualnie znalezione.
-	\subsection{Technologia i implementacja rozwiązań}			
+	\subsection{Technologia i implementacja rozwiązań}	
+		Projekt implementowano 	w języku Java w wersji 8. Środowiskiem wspierającym rozwój prac był InteliJ Idea Ultimate w wersji 14.07.   	
 \section{Projekt aplikacji}	
 	\subsection{Wybrane klasy}
 	
