@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.8)  1 JUN 2016 21:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.8)  1 JUN 2016 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -550,6 +550,54 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2015/05/11 v0.4x Insert pages of external PDF documents (AM)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count209
+\calc@Bcount=\count210
+\calc@Adimen=\dimen116
+\calc@Bdimen=\dimen117
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count211
+\calc@Cskip=\skip59
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/04/20 v2.0e eso-pic (RN)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count212
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -563,29 +611,32 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
+)
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+\AM@pagewidth=\dimen120
+\AM@pageheight=\dimen121
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count209
-))
-\Gin@req@height=\dimen116
-\Gin@req@width=\dimen117
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2015/05/11 v0.4x Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box26
+\AM@toc@title=\toks17
+\c@AM@survey=\count213
+\AM@templatesizebox=\box27
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count210
-\float@exts=\toks17
-\float@box=\box26
-\@float@everytoks=\toks18
-\@floatcapt=\box27
+\c@float@type=\count214
+\float@exts=\toks18
+\float@box=\box28
+\@float@everytoks=\toks19
+\@floatcapt=\box29
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
@@ -593,38 +644,38 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count211
-\Gm@cntv=\count212
-\c@Gm@tempcnt=\count213
-\Gm@bindingoffset=\dimen118
-\Gm@wd@mp=\dimen119
-\Gm@odd@mp=\dimen120
-\Gm@even@mp=\dimen121
-\Gm@layoutwidth=\dimen122
-\Gm@layoutheight=\dimen123
-\Gm@layouthoffset=\dimen124
-\Gm@layoutvoffset=\dimen125
-\Gm@dimlist=\toks19
+\Gm@cnth=\count215
+\Gm@cntv=\count216
+\c@Gm@tempcnt=\count217
+\Gm@bindingoffset=\dimen122
+\Gm@wd@mp=\dimen123
+\Gm@odd@mp=\dimen124
+\Gm@even@mp=\dimen125
+\Gm@layoutwidth=\dimen126
+\Gm@layoutheight=\dimen127
+\Gm@layouthoffset=\dimen128
+\Gm@layoutvoffset=\dimen129
+\Gm@dimlist=\toks20
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count214
-\lst@gtempboxa=\box28
-\lst@token=\toks20
-\lst@length=\count215
-\lst@currlwidth=\dimen126
-\lst@column=\count216
-\lst@pos=\count217
-\lst@lostspace=\dimen127
-\lst@width=\dimen128
-\lst@newlines=\count218
-\lst@lineno=\count219
-\lst@maxwidth=\dimen129
+\lst@mode=\count218
+\lst@gtempboxa=\box30
+\lst@token=\toks21
+\lst@length=\count219
+\lst@currlwidth=\dimen130
+\lst@column=\count220
+\lst@pos=\count221
+\lst@lostspace=\dimen131
+\lst@width=\dimen132
+\lst@newlines=\count222
+\lst@lineno=\count223
+\lst@maxwidth=\dimen133
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count220
-\lst@skipnumbers=\count221
-\lst@framebox=\box29
+\c@lstnumber=\count224
+\lst@skipnumbers=\count225
+\lst@framebox=\box31
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2014/09/06 1.5e listings configuration
@@ -644,26 +695,26 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 )
-\@quotelevel=\count222
-\@quotereset=\count223
+\@quotelevel=\count226
+\@quotereset=\count227
 
 (./dokumentacja.aux)
 \openout1 = `dokumentacja.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -673,21 +724,22 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'dokumentacja.bbl' not found.
 
 No file dokumentacja.bbl.
-Package biblatex Info: Reference section=0 on input line 23.
-Package biblatex Info: Reference segment=0 on input line 23.
+Package biblatex Info: Reference section=0 on input line 24.
+Package biblatex Info: Reference segment=0 on input line 24.
+\AtBeginShipoutBox=\box32
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count224
-\scratchdimen=\dimen130
-\scratchbox=\box30
-\nofMPsegments=\count225
-\nofMParguments=\count226
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count227
-\MPscratchDim=\dimen131
-\MPnumerator=\count228
-\makeMPintoPDFobject=\count229
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count228
+\scratchdimen=\dimen134
+\scratchbox=\box33
+\nofMPsegments=\count229
+\nofMParguments=\count230
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count231
+\MPscratchDim=\dimen135
+\MPnumerator=\count232
+\makeMPintoPDFobject=\count233
+\everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -748,7 +800,45 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count230
+\c@lstlisting=\count266
+<strona-tytulowa.pdf, id=1, 597.23125pt x 845.1575pt>
+File: strona-tytulowa.pdf Graphic file (type pdf)
+
+<use strona-tytulowa.pdf>
+Package pdftex.def Info: strona-tytulowa.pdf used on input line 25.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: strona-tytulowa.pdf Graphic file (type pdf)
+ <use strona-tytulowa.pdf>
+Package pdftex.def Info: strona-tytulowa.pdf used on input line 25.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<strona-tytulowa.pdf, id=4, page=1, 597.23125pt x 845.1575pt>
+File: strona-tytulowa.pdf Graphic file (type pdf)
+
+<use strona-tytulowa.pdf, page 1>
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: strona-tytulowa.pdf Graphic file (type pdf)
+ <use strona-tytulowa.pdf, page 1>
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: strona-tytulowa.pdf Graphic file (type pdf)
+
+<use strona-tytulowa.pdf, page 1>
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: strona-tytulowa.pdf Graphic file (type pdf)
+ <use strona-tytulowa.pdf, page 1>
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: strona-tytulowa.pdf Graphic file (type pdf)
+
+<use strona-tytulowa.pdf, page 1>
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 25.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [1
+
+ <./strona-tytulowa.pdf>]
 (./dokumentacja.toc
 LaTeX Font Info:    Try loading font information for OML+plm on input line 5.
 
@@ -775,56 +865,49 @@ LaTeX Font Info:    External font `plex10' loaded for size
 \tf@toc=\write4
 \openout4 = `dokumentacja.toc'.
 
- [1
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+ [2{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./dokumentacja.lof)
 \tf@lof=\write5
 \openout5 = `dokumentacja.lof'.
 
- [2] (./dokumentacja.lot)
+ [3] (./dokumentacja.lot)
 \tf@lot=\write6
 \openout6 = `dokumentacja.lot'.
 
- [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
+ [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
- [4] [5]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 138.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+ [5] [6]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 139.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 138.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 139.
 
-Overfull \hbox (33.66733pt too wide) in paragraph at lines 139--140
+Overfull \hbox (33.66733pt too wide) in paragraph at lines 140--141
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[6]
-Overfull \hbox (21.6672pt too wide) in paragraph at lines 168--169
+[7]
+Overfull \hbox (21.6672pt too wide) in paragraph at lines 169--170
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.66739pt too wide) in paragraph at lines 185--186
+Overfull \hbox (39.66739pt too wide) in paragraph at lines 186--187
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.66702pt too wide) in paragraph at lines 186--187
-[][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (9.66708pt too wide) in paragraph at lines 187--188
+Overfull \hbox (3.66702pt too wide) in paragraph at lines 187--188
 [][][][][][][][][][][][][][][][][] 
  []
 
@@ -833,29 +916,29 @@ Overfull \hbox (9.66708pt too wide) in paragraph at lines 188--189
 [][][][][][][][][][][][][][][][][] 
  []
 
-[7]
-Overfull \hbox (15.66714pt too wide) in paragraph at lines 212--214
+
+Overfull \hbox (9.66708pt too wide) in paragraph at lines 189--190
+[][][][][][][][][][][][][][][][][] 
+ []
+
+[8]
+Overfull \hbox (15.66714pt too wide) in paragraph at lines 213--215
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.66739pt too wide) in paragraph at lines 215--216
+Overfull \hbox (39.66739pt too wide) in paragraph at lines 216--217
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.66714pt too wide) in paragraph at lines 223--224
+Overfull \hbox (15.66714pt too wide) in paragraph at lines 224--225
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (135.66837pt too wide) in paragraph at lines 225--226
+Overfull \hbox (135.66837pt too wide) in paragraph at lines 226--227
 [][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (33.66733pt too wide) in paragraph at lines 226--227
-[][][][][][][][][][][][][][] 
  []
 
 
@@ -864,98 +947,103 @@ Overfull \hbox (33.66733pt too wide) in paragraph at lines 227--228
  []
 
 
-Overfull \hbox (45.66745pt too wide) in paragraph at lines 246--247
+Overfull \hbox (33.66733pt too wide) in paragraph at lines 228--229
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (45.66745pt too wide) in paragraph at lines 247--248
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.6672pt too wide) in paragraph at lines 247--248
+Overfull \hbox (21.6672pt too wide) in paragraph at lines 248--249
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[8]
-Overfull \hbox (225.66928pt too wide) in paragraph at lines 268--269
+[9]
+Overfull \hbox (225.66928pt too wide) in paragraph at lines 269--270
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (4.48087pt too wide) in paragraph at lines 287--287
+Overfull \hbox (4.48087pt too wide) in paragraph at lines 288--288
 []\OT4/cmr/bx/n/12 Czasy wy-ko-na-nia al-go-ryt-mów przy sta-ªej licz-bie w¡t-k
 ów i zmien-
  []
 
-<bfS.png, id=35, 532.99126pt x 347.04657pt>
+<bfS.png, id=72, 532.99126pt x 347.04657pt>
 File: bfS.png Graphic file (type png)
  <use bfS.png>
-Package pdftex.def Info: bfS.png used on input line 315.
+Package pdftex.def Info: bfS.png used on input line 316.
 (pdftex.def)             Requested size: 278.83578pt x 181.56142pt.
- [9]
-<bfSvsR.png, id=40, 355.3275pt x 218.31563pt>
+ [10]
+<bfSvsR.png, id=77, 355.3275pt x 218.31563pt>
 File: bfSvsR.png Graphic file (type png)
  <use bfSvsR.png>
-Package pdftex.def Info: bfSvsR.png used on input line 339.
+Package pdftex.def Info: bfSvsR.png used on input line 340.
 (pdftex.def)             Requested size: 278.83578pt x 171.32483pt.
- [10 <./bfS.png>] <bbS.png, id=45, 361.35pt x 217.5628pt>
+ [11 <./bfS.png>] <bbS.png, id=82, 361.35pt x 217.5628pt>
 File: bbS.png Graphic file (type png)
  <use bbS.png>
-Package pdftex.def Info: bbS.png used on input line 364.
+Package pdftex.def Info: bbS.png used on input line 365.
 (pdftex.def)             Requested size: 358.50229pt x 215.84927pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
 
  []
 
-[11 <./bfSvsR.png> <./bbS.png>] <bbR.png, id=51, 365.86688pt x 219.06844pt>
+[12 <./bfSvsR.png> <./bbS.png>] <bbR.png, id=88, 365.86688pt x 219.06844pt>
 File: bbR.png Graphic file (type png)
 
 <use bbR.png>
-Package pdftex.def Info: bbR.png used on input line 390.
+Package pdftex.def Info: bbR.png used on input line 391.
 (pdftex.def)             Requested size: 358.50229pt x 214.66887pt.
- <bbRvsS.png, id=52, 362.10281pt x 216.05719pt>
+ <bbRvsS.png, id=89, 362.10281pt x 216.05719pt>
 File: bbRvsS.png Graphic file (type png)
  <use bbRvsS.png>
-Package pdftex.def Info: bbRvsS.png used on input line 401.
+Package pdftex.def Info: bbRvsS.png used on input line 402.
 (pdftex.def)             Requested size: 358.50229pt x 213.91045pt.
 
-[12 <./bbR.png>] <BFS2.png, id=57, 523.20468pt x 240.14719pt>
+[13 <./bbR.png>] <BFS2.png, id=95, 523.20468pt x 240.14719pt>
 File: BFS2.png Graphic file (type png)
  <use BFS2.png>
-Package pdftex.def Info: BFS2.png used on input line 436.
+Package pdftex.def Info: BFS2.png used on input line 437.
 (pdftex.def)             Requested size: 358.50229pt x 164.55478pt.
 
-[13 <./bbRvsS.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
+[14 <./bbRvsS.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
-<bfRvsS.png, id=63, 368.1253pt x 216.81pt>
+<bfRvsS.png, id=100, 368.1253pt x 216.81pt>
 File: bfRvsS.png Graphic file (type png)
  <use bfRvsS.png>
-Package pdftex.def Info: bfRvsS.png used on input line 469.
+Package pdftex.def Info: bfRvsS.png used on input line 470.
 (pdftex.def)             Requested size: 358.50229pt x 211.15897pt.
- [14 <./BFS2.png>]
-<bbS2.png, id=68, 412.54124pt x 249.18094pt>
+ [15 <./BFS2.png>]
+<bbS2.png, id=105, 412.54124pt x 249.18094pt>
 File: bbS2.png Graphic file (type png)
  <use bbS2.png>
-Package pdftex.def Info: bbS2.png used on input line 500.
+Package pdftex.def Info: bbS2.png used on input line 501.
 (pdftex.def)             Requested size: 358.50229pt x 216.54231pt.
- [15 <./bfRvsS.png>] [16 <./bbS2.png>]
+ [16 <./bfRvsS.png>] [17 <./bbS2.png>]
 
-LaTeX Warning: Empty bibliography on input line 533.
+LaTeX Warning: Empty bibliography on input line 534.
 
-[17] (./dokumentacja.aux)
+[18] (./dokumentacja.aux)
 Package logreq Info: Writing requests to 'dokumentacja.run.xml'.
 \openout1 = `dokumentacja.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9415 strings out of 493089
- 150630 string characters out of 6134843
- 585468 words of memory out of 5000000
- 12764 multiletter control sequences out of 15000+600000
+ 10615 strings out of 493089
+ 168026 string characters out of 6134843
+ 611804 words of memory out of 5000000
+ 13936 multiletter control sequences out of 15000+600000
  10353 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,8n,35p,1191b,1550s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,18n,42p,1191b,1560s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/local/t
 exlive/2015/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/local/texlive/2015/tex
 mf-dist/fonts/enc/dvips/pl/plrm.enc}</usr/local/texlive/2015/texmf-dist/fonts/t
@@ -965,10 +1053,10 @@ e1/public/pl/plbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 pl/plbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/pl/plr10.p
 fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on dokumentacja.pdf (17 pages, 153702 bytes).
+Output written on dokumentacja.pdf (18 pages, 225206 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
