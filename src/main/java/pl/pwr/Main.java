@@ -20,7 +20,7 @@ public class Main {
         //runTestTimeBBAlgorithm();
         runAlgorithmMultiThreaded();
 
-        BBAlgorithm algorithm = new BBAlgorithm();
+      //  BBAlgorithm algorithm = new BBAlgorithm();
        // runAlgorithmSerially(algorithm);
     }
 
@@ -38,7 +38,7 @@ public class Main {
 
     private static void runAlgorithmMultiThreaded() {
         System.out.println("WIELOWĄTKOWO:");
-        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(50);
+        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(44);
         threadsStartTime = System.currentTimeMillis();
 
         for(int i=0; i<10;i++){
@@ -61,7 +61,7 @@ public class Main {
 
     private static void runAlgorithmSerially(Algorithm algorithm) {
         System.out.print("SZEREGOWO\n");
-        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(50);
+        Matrix matrix10 = MatrixGeneratorSingleton.getInstance().generate(10);
         long allTime = 0L;
         for(int i=0; i<10;i++){
             long start = System.currentTimeMillis();
