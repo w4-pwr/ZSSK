@@ -18,7 +18,8 @@
 	top=35mm,
 	bottom = 25mm
 }
-
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
   
 
 \begin{document}	
@@ -531,23 +532,7 @@
 \section{Podsumowanie}
 	Wykonanie projektu pozwoliło uzmysłowić nam istotę dobrego planowania pracy podczas operacji na wielu wątkach. Najistotniejszymi problemami jest synchronizowany dostęp do zasobów podczas pracy wielu wątków. Zmierzyliśmy się z tym problem podczas mierzenia czasu pracy algorytmów. Zastosowanie odpowiednich technik i badań operacyjnych umożliwiło implementację algorytmów. Algorytmy rozwiązujące optymalizacyjny problem komiwojażera są tematem rozległym i nietrywialnym.
 \section{Literatura}
-\printbibliography[heading=none]
-\begin{thebibliography}{9}
-	
-	\bibitem{cormen}
-	Thomas Cormen,
-	\emph{Wstęp do algorytmów},
-	Leiserson,Rivest, Stein
-	7nd edition,
-	2005.
-	
-	\bibitem{little}
-	John Little, 
-	\emph{An algorithm for the traveling salesman problem},
-	Little, John
-	1963.
-	\end{thebibliography}
-
+[1] Thomas Cormen, \emph{Wstęp do algorytmów}, Leiserson, Rivest, Stein 7nd edition, 2005. \newline [2] John Little, \emph{An algorithm for the traveling salesman problem}, Little, John 1963.
 
 
 
