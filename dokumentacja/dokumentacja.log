@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.8)  2 JUN 2016 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.8)  2 JUN 2016 17:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -657,25 +657,37 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen129
 \Gm@dimlist=\toks20
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box30
+\beforetitleunit=\skip60
+\aftertitleunit=\skip61
+\ttl@plus=\dimen130
+\ttl@minus=\dimen131
+\ttl@toksa=\toks21
+\titlewidth=\dimen132
+\titlewidthlast=\dimen133
+\titlewidthfirst=\dimen134
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count218
-\lst@gtempboxa=\box30
-\lst@token=\toks21
+\lst@gtempboxa=\box31
+\lst@token=\toks22
 \lst@length=\count219
-\lst@currlwidth=\dimen130
+\lst@currlwidth=\dimen135
 \lst@column=\count220
 \lst@pos=\count221
-\lst@lostspace=\dimen131
-\lst@width=\dimen132
+\lst@lostspace=\dimen136
+\lst@width=\dimen137
 \lst@newlines=\count222
 \lst@lineno=\count223
-\lst@maxwidth=\dimen133
+\lst@maxwidth=\dimen138
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count224
 \lst@skipnumbers=\count225
-\lst@framebox=\box31
+\lst@framebox=\box32
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2014/09/06 1.5e listings configuration
@@ -701,20 +713,20 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 (./dokumentacja.aux)
 \openout1 = `dokumentacja.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -724,22 +736,22 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'dokumentacja.bbl' not found.
 
 No file dokumentacja.bbl.
-Package biblatex Info: Reference section=0 on input line 25.
-Package biblatex Info: Reference segment=0 on input line 25.
-\AtBeginShipoutBox=\box32
+Package biblatex Info: Reference section=0 on input line 26.
+Package biblatex Info: Reference segment=0 on input line 26.
+\AtBeginShipoutBox=\box33
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count228
-\scratchdimen=\dimen134
-\scratchbox=\box33
+\scratchdimen=\dimen139
+\scratchbox=\box34
 \nofMPsegments=\count229
 \nofMParguments=\count230
-\everyMPshowfont=\toks22
+\everyMPshowfont=\toks23
 \MPscratchCnt=\count231
-\MPscratchDim=\dimen135
+\MPscratchDim=\dimen140
 \MPnumerator=\count232
 \makeMPintoPDFobject=\count233
-\everyMPtoPDFconversion=\toks23
+\everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -805,36 +817,36 @@ e
 File: strona-tytulowa.pdf Graphic file (type pdf)
 
 <use strona-tytulowa.pdf>
-Package pdftex.def Info: strona-tytulowa.pdf used on input line 26.
+Package pdftex.def Info: strona-tytulowa.pdf used on input line 28.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: strona-tytulowa.pdf Graphic file (type pdf)
  <use strona-tytulowa.pdf>
-Package pdftex.def Info: strona-tytulowa.pdf used on input line 26.
+Package pdftex.def Info: strona-tytulowa.pdf used on input line 28.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
 <strona-tytulowa.pdf, id=4, page=1, 597.23125pt x 845.1575pt>
 File: strona-tytulowa.pdf Graphic file (type pdf)
 
 <use strona-tytulowa.pdf, page 1>
-Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 26.
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 28.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: strona-tytulowa.pdf Graphic file (type pdf)
  <use strona-tytulowa.pdf, page 1>
-Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 26.
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 28.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: strona-tytulowa.pdf Graphic file (type pdf)
 
 <use strona-tytulowa.pdf, page 1>
-Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 26.
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 28.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: strona-tytulowa.pdf Graphic file (type pdf)
  <use strona-tytulowa.pdf, page 1>
-Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 26.
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 28.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: strona-tytulowa.pdf Graphic file (type pdf)
 
 <use strona-tytulowa.pdf, page 1>
-Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 26.
+Package pdftex.def Info: strona-tytulowa.pdf, page1 used on input line 28.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
  [1
 
@@ -874,172 +886,171 @@ LaTeX Font Info:    External font `plex10' loaded for size
 \tf@lot=\write6
 \openout6 = `dokumentacja.lot'.
 
- [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
+ [4] [5]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
- [5] [6]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 140.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+ [6] [7]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 145.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 140.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 145.
 
-Overfull \hbox (33.66733pt too wide) in paragraph at lines 141--142
+Overfull \hbox (33.66733pt too wide) in paragraph at lines 146--147
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[7]
-Overfull \hbox (21.6672pt too wide) in paragraph at lines 170--171
+[8]
+Overfull \hbox (21.6672pt too wide) in paragraph at lines 175--176
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.66739pt too wide) in paragraph at lines 187--188
+Overfull \hbox (39.66739pt too wide) in paragraph at lines 192--193
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.66702pt too wide) in paragraph at lines 188--189
+Overfull \hbox (3.66702pt too wide) in paragraph at lines 193--194
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (9.66708pt too wide) in paragraph at lines 189--190
+Overfull \hbox (9.66708pt too wide) in paragraph at lines 194--195
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (9.66708pt too wide) in paragraph at lines 190--191
+Overfull \hbox (9.66708pt too wide) in paragraph at lines 195--196
 [][][][][][][][][][][][][][][][][] 
  []
 
-[8]
-Overfull \hbox (15.66714pt too wide) in paragraph at lines 214--216
+[9]
+Overfull \hbox (15.66714pt too wide) in paragraph at lines 219--221
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (39.66739pt too wide) in paragraph at lines 217--218
+Overfull \hbox (39.66739pt too wide) in paragraph at lines 222--223
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.66714pt too wide) in paragraph at lines 225--226
+Overfull \hbox (15.66714pt too wide) in paragraph at lines 230--231
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (135.66837pt too wide) in paragraph at lines 227--228
+Overfull \hbox (135.66837pt too wide) in paragraph at lines 232--233
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (33.66733pt too wide) in paragraph at lines 228--229
+Overfull \hbox (33.66733pt too wide) in paragraph at lines 233--234
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (33.66733pt too wide) in paragraph at lines 229--230
+Overfull \hbox (33.66733pt too wide) in paragraph at lines 234--235
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (45.66745pt too wide) in paragraph at lines 248--249
+Overfull \hbox (45.66745pt too wide) in paragraph at lines 253--254
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.6672pt too wide) in paragraph at lines 249--250
+Overfull \hbox (21.6672pt too wide) in paragraph at lines 254--255
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[9]
-Overfull \hbox (225.66928pt too wide) in paragraph at lines 270--271
+[10]
+Overfull \hbox (225.66928pt too wide) in paragraph at lines 275--276
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (4.48087pt too wide) in paragraph at lines 289--289
-[]\OT4/cmr/bx/n/12 Czasy wy-ko-na-nia al-go-ryt-mów przy sta-ªej licz-bie w¡t-k
-ów i zmien-
+[11]
+Overfull \hbox (4.48087pt too wide) in paragraph at lines 295--295
+ |[]\OT4/cmr/bx/n/12 Czasy wy-ko-na-nia al-go-ryt-mów przy sta-ªej licz-bie w¡t
+-ków i zmien-
  []
 
-<bfS.png, id=72, 532.99126pt x 347.04657pt>
+<bfS.png, id=78, 532.99126pt x 347.04657pt>
 File: bfS.png Graphic file (type png)
  <use bfS.png>
-Package pdftex.def Info: bfS.png used on input line 317.
+Package pdftex.def Info: bfS.png used on input line 323.
 (pdftex.def)             Requested size: 278.83578pt x 181.56142pt.
- [10]
-<bfSvsR.png, id=77, 355.3275pt x 218.31563pt>
+ [12 <./bfS.png>]
+<bfSvsR.png, id=84, 355.3275pt x 218.31563pt>
 File: bfSvsR.png Graphic file (type png)
  <use bfSvsR.png>
-Package pdftex.def Info: bfSvsR.png used on input line 341.
+Package pdftex.def Info: bfSvsR.png used on input line 347.
 (pdftex.def)             Requested size: 278.83578pt x 171.32483pt.
- [11 <./bfS.png>] <bbS.png, id=82, 361.35pt x 217.5628pt>
+
+<bbS.png, id=85, 361.35pt x 217.5628pt>
 File: bbS.png Graphic file (type png)
  <use bbS.png>
-Package pdftex.def Info: bbS.png used on input line 366.
+Package pdftex.def Info: bbS.png used on input line 372.
 (pdftex.def)             Requested size: 358.50229pt x 215.84927pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--376
+ [13 <./bfSvsR.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
 
  []
 
-[12 <./bfSvsR.png> <./bbS.png>] <bbR.png, id=88, 365.86688pt x 219.06844pt>
+<bbR.png, id=91, 365.86688pt x 219.06844pt>
 File: bbR.png Graphic file (type png)
-
-<use bbR.png>
-Package pdftex.def Info: bbR.png used on input line 392.
+ <use bbR.png>
+Package pdftex.def Info: bbR.png used on input line 398.
 (pdftex.def)             Requested size: 358.50229pt x 214.66887pt.
- <bbRvsS.png, id=89, 362.10281pt x 216.05719pt>
+ [14 <./bbS.png>]
+<bbRvsS.png, id=96, 362.10281pt x 216.05719pt>
 File: bbRvsS.png Graphic file (type png)
  <use bbRvsS.png>
-Package pdftex.def Info: bbRvsS.png used on input line 403.
+Package pdftex.def Info: bbRvsS.png used on input line 409.
 (pdftex.def)             Requested size: 358.50229pt x 213.91045pt.
-
-[13 <./bbR.png>] <BFS2.png, id=95, 523.20468pt x 240.14719pt>
+ [15 <./bbR.png> <./bbRvsS.png>] <BFS2.png, id=102, 523.20468pt x 240.14719pt>
 File: BFS2.png Graphic file (type png)
  <use BFS2.png>
-Package pdftex.def Info: BFS2.png used on input line 438.
+Package pdftex.def Info: BFS2.png used on input line 444.
 (pdftex.def)             Requested size: 358.50229pt x 164.55478pt.
 
-[14 <./bbRvsS.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
 
  []
 
-<bfRvsS.png, id=100, 368.1253pt x 216.81pt>
+[16 <./BFS2.png>] <bfRvsS.png, id=107, 368.1253pt x 216.81pt>
 File: bfRvsS.png Graphic file (type png)
  <use bfRvsS.png>
-Package pdftex.def Info: bfRvsS.png used on input line 471.
+Package pdftex.def Info: bfRvsS.png used on input line 477.
 (pdftex.def)             Requested size: 358.50229pt x 211.15897pt.
- [15 <./BFS2.png>]
-<bbS2.png, id=105, 412.54124pt x 249.18094pt>
+
+<bbS2.png, id=108, 412.54124pt x 249.18094pt>
 File: bbS2.png Graphic file (type png)
  <use bbS2.png>
-Package pdftex.def Info: bbS2.png used on input line 502.
+Package pdftex.def Info: bbS2.png used on input line 508.
 (pdftex.def)             Requested size: 358.50229pt x 216.54231pt.
- [16 <./bfRvsS.png>] [17 <./bbS2.png>] [18] (./dokumentacja.aux)
+ [17 <./bfRvsS.png>] [18 <./bbS2.png>] [19] [20] [21] (./dokumentacja.aux)
 Package logreq Info: Writing requests to 'dokumentacja.run.xml'.
 \openout1 = `dokumentacja.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 10612 strings out of 493089
- 167993 string characters out of 6134843
- 611782 words of memory out of 5000000
- 13933 multiletter control sequences out of 15000+600000
+ 10884 strings out of 493089
+ 171507 string characters out of 6134843
+ 616769 words of memory out of 5000000
+ 14201 multiletter control sequences out of 15000+600000
  10353 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,18n,42p,1191b,1560s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,18n,42p,1272b,1562s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/usr/local/t
 exlive/2015/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/local/texlive/2015/tex
 mf-dist/fonts/enc/dvips/pl/plrm.enc}</usr/local/texlive/2015/texmf-dist/fonts/t
@@ -1049,10 +1060,10 @@ e1/public/pl/plbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 pl/plbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/pl/plr10.p
 fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/pl/plti10.pfb>
-Output written on dokumentacja.pdf (18 pages, 227338 bytes).
+Output written on dokumentacja.pdf (21 pages, 228085 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 154 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

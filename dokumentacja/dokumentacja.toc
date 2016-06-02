@@ -6,78 +6,74 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2}Zakres projektu}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Sformu\IeC {\l }owanie problemu}{5}
+\contentsline {section}{\numberline {2}Sformu\IeC {\l }owanie problemu}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Opis wariant\IeC {\'o}w rozwi\IeC {\k a}zywania problemu}{5}
+\contentsline {subsection}{\numberline {2.1}Opis wariant\IeC {\'o}w rozwi\IeC {\k a}zywania problemu}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}Przegl\IeC {\k a}d zupe\IeC {\l }ny}{5}
+\contentsline {subsubsection}{\numberline {2.1.1}Przegl\IeC {\k a}d zupe\IeC {\l }ny}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2}Branch\&Bound}{5}
+\contentsline {subsubsection}{\numberline {2.1.2}Branch\&Bound}{6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Analiza z\IeC {\l }o\IeC {\.z}ono\IeC {\'s}ci obliczeniowej algorytm\IeC {\'o}w}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Projekt aplikacji}{6}
+\contentsline {section}{\numberline {3}Projekt aplikacji}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Technologia i implementacja rozwi\IeC {\k a}za\IeC {\'n}}{6}
+\contentsline {subsection}{\numberline {3.1}Technologia i implementacja rozwi\IeC {\k a}za\IeC {\'n}}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Struktura programu}{6}
+\contentsline {subsection}{\numberline {3.2}Struktura programu}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Wybrane klasy}{6}
+\contentsline {subsection}{\numberline {3.3}Wybrane klasy}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.1}Klasa Matrix - reprezentacja po\IeC {\l }\IeC {\k a}cze\IeC {\'n} grafu}{6}
+\contentsline {subsubsection}{\numberline {3.3.1}Klasa Matrix - reprezentacja po\IeC {\l }\IeC {\k a}cze\IeC {\'n} grafu}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.2}Klasa Edge - reprezentacja kraw\IeC {\k e}dzi w grafie}{6}
+\contentsline {subsubsection}{\numberline {3.3.2}Klasa Edge - reprezentacja kraw\IeC {\k e}dzi w grafie}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.3}Klasa Node - reprezentacja rozwi\IeC {\k a}zania w algorytmie B\&B}{7}
+\contentsline {subsubsection}{\numberline {3.3.3}Klasa Node - reprezentacja rozwi\IeC {\k a}zania w algorytmie B\&B}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Realizacja algorytm\IeC {\'o}w wyznaczania rozwi\IeC {\k a}za\IeC {\'n}}{7}
+\contentsline {subsection}{\numberline {3.4}Realizacja algorytm\IeC {\'o}w wyznaczania rozwi\IeC {\k a}za\IeC {\'n}}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.1}Przegl\IeC {\k a}d zupe\IeC {\l }ny}{7}
+\contentsline {subsubsection}{\numberline {3.4.1}Przegl\IeC {\k a}d zupe\IeC {\l }ny}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}Branch\&Bound}{7}
+\contentsline {subsubsection}{\numberline {3.4.2}Branch\&Bound}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Odczyt i zapis danych}{8}
+\contentsline {subsection}{\numberline {3.5}Odczyt i zapis danych}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.1}Wczytywanie z plik\IeC {\'o}w .tsp}{8}
+\contentsline {subsubsection}{\numberline {3.5.1}Wczytywanie z plik\IeC {\'o}w .tsp}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.2}Generowanie macierzy losowo}{8}
+\contentsline {subsubsection}{\numberline {3.5.2}Generowanie macierzy losowo}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.3}Generowanie plik\IeC {\'o}w cvs}{9}
+\contentsline {subsubsection}{\numberline {3.5.3}Generowanie plik\IeC {\'o}w cvs}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Testowanie wydajno\IeC {\'s}ci}{10}
+\contentsline {section}{\numberline {4}Testowanie wydajno\IeC {\'s}ci}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Czasy wykonania algorytm\IeC {\'o}w przy sta\IeC {\l }ej liczbie w\IeC {\k a}tk\IeC {\'o}w i zmiennych rozmiarach danych wej\IeC {\'s}ciowych}{10}
+\contentsline {subsection}{\numberline {4.1}Czasy wykonania algorytm\IeC {\'o}w przy sta\IeC {\l }ej liczbie w\IeC {\k a}tk\IeC {\'o}w i zmiennych rozmiarach danych wej\IeC {\'s}ciowych}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}Czas dzia\IeC {\l }ania algorytmu dla przegl\IeC {\k a}du zupe\IeC {\l }nego - wersja szeregowa}{10}
+\contentsline {subsubsection}{\numberline {4.1.1}Czas dzia\IeC {\l }ania algorytmu dla przegl\IeC {\k a}du zupe\IeC {\l }nego - wersja szeregowa}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}Czas dzia\IeC {\l }ania algorytmu dla przegl\IeC {\k a}du zupe\IeC {\l }nego - wersja r\IeC {\'o}wnoleg\IeC {\l }a}{11}
+\contentsline {subsubsection}{\numberline {4.1.2}Czas dzia\IeC {\l }ania algorytmu dla przegl\IeC {\k a}du zupe\IeC {\l }nego - wersja r\IeC {\'o}wnoleg\IeC {\l }a}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.3}Por\IeC {\'o}wnanie czas\IeC {\'o}w wykonywania algorytmu przegl\IeC {\k a}du zupe\IeC {\l }nego}{11}
+\contentsline {subsubsection}{\numberline {4.1.3}Por\IeC {\'o}wnanie czas\IeC {\'o}w wykonywania algorytmu przegl\IeC {\k a}du zupe\IeC {\l }nego}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.4}Czas dzia\IeC {\l }ania algorytmu metod\IeC {\k a} podzia\IeC {\l }u i ogranicze\IeC {\'n} - wersja szeregowa}{12}
+\contentsline {subsubsection}{\numberline {4.1.4}Czas dzia\IeC {\l }ania algorytmu metod\IeC {\k a} podzia\IeC {\l }u i ogranicze\IeC {\'n} - wersja szeregowa}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.5}Czas dzia\IeC {\l }ania algorytmu metod\IeC {\k a} podzia\IeC {\l }u i ogranicze\IeC {\'n} - wersja r\IeC {\'o}wnoleg\IeC {\l }a}{13}
+\contentsline {subsubsection}{\numberline {4.1.5}Czas dzia\IeC {\l }ania algorytmu metod\IeC {\k a} podzia\IeC {\l }u i ogranicze\IeC {\'n} - wersja r\IeC {\'o}wnoleg\IeC {\l }a}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.6}Por\IeC {\'o}wnanie czasu dzia\IeC {\l }ania algorytmu metod\IeC {\k a} podzia\IeC {\l }u i ogranicze\IeC {\'n}}{13}
+\contentsline {subsubsection}{\numberline {4.1.6}Por\IeC {\'o}wnanie czasu dzia\IeC {\l }ania algorytmu metod\IeC {\k a} podzia\IeC {\l }u i ogranicze\IeC {\'n}}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Czas wykonywania algorytmu przy sta\IeC {\l }ym rozmiarze danych wej\IeC {\'s}ciowych i zmiennej liczbie w\IeC {\k a}tk\IeC {\'o}w}{14}
+\contentsline {subsection}{\numberline {4.2}Czas wykonywania algorytmu przy sta\IeC {\l }ym rozmiarze danych wej\IeC {\'s}ciowych i zmiennej liczbie w\IeC {\k a}tk\IeC {\'o}w}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Algorytm przegl\IeC {\k a}du zupe\IeC {\l }nego - dzia\IeC {\l }anie szeregowe}{14}
+\contentsline {subsubsection}{\numberline {4.2.1}Algorytm przegl\IeC {\k a}du zupe\IeC {\l }nego - dzia\IeC {\l }anie szeregowe}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Algorytm przegl\IeC {\k a}du zupe\IeC {\l }nego - dzia\IeC {\l }anie r\IeC {\'o}wnoleg\IeC {\l }e}{15}
+\contentsline {subsubsection}{\numberline {4.2.2}Algorytm przegl\IeC {\k a}du zupe\IeC {\l }nego - dzia\IeC {\l }anie r\IeC {\'o}wnoleg\IeC {\l }e}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3}Algorytm przegl\IeC {\k a}du zupe\IeC {\l }nego - por\IeC {\'o}wnanie czas\IeC {\'o}w dzia\IeC {\l }ania}{15}
+\contentsline {subsubsection}{\numberline {4.2.3}Algorytm przegl\IeC {\k a}du zupe\IeC {\l }nego - por\IeC {\'o}wnanie czas\IeC {\'o}w dzia\IeC {\l }ania}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.4}Algorytm podzia\IeC {\l }u i ogranicze\IeC {\'n} - dzia\IeC {\l }anie szeregowe}{16}
+\contentsline {subsubsection}{\numberline {4.2.4}Algorytm podzia\IeC {\l }u i ogranicze\IeC {\'n} - dzia\IeC {\l }anie szeregowe}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.5}Algorytm podzia\IeC {\l }u i ogranicze\IeC {\'n} - dzia\IeC {\l }anie r\IeC {\'o}wnoleg\IeC {\l }e}{17}
+\contentsline {subsubsection}{\numberline {4.2.5}Algorytm podzia\IeC {\l }u i ogranicze\IeC {\'n} - dzia\IeC {\l }anie r\IeC {\'o}wnoleg\IeC {\l }e}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.6}Algorytm podzia\IeC {\l }u i ogranicze\IeC {\'n} - por\IeC {\'o}wnanie czasu dzia\IeC {\l }ania}{17}
+\contentsline {subsubsection}{\numberline {4.2.6}Algorytm podzia\IeC {\l }u i ogranicze\IeC {\'n} - por\IeC {\'o}wnanie czasu dzia\IeC {\l }ania}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Analiza i ocena jako\IeC {\'s}ci}{17}
+\contentsline {subsection}{\numberline {4.3}Analiza i ocena jako\IeC {\'s}ci}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Wnioski z test\IeC {\'o}w i bada\IeC {\'n}}{18}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Podsumowanie}{18}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Literatura}{18}
+\contentsline {section}{\numberline {5}Podsumowanie}{20}
