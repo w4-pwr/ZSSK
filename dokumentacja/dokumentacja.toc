@@ -76,4 +76,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3}Analiza i ocena jako\IeC {\'s}ci}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Podsumowanie}{20}
+\contentsline {section}{\numberline {5}Podsumowanie}{19}
